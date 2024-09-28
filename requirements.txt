@@ -1,0 +1,9 @@
+fastapi==0.100.0
+uvicorn==0.22.0
+pydantic==1.10.9
+slowapi==0.1.6
+environs==9.5.0
+pillow==9.5.0
+rembg==2.0.59
+torch==2.4.0
+git+https://github.com/sberbank-ai/Real-ESRGAN.git
