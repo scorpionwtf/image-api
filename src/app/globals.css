@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  
+}
+:root {
+  height: 100%;
+}
+
+@layer base {
+  
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 346.8 77.2% 49.8%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.3rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 346.8 77.2% 49.8%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium inline-flex justify-center items-center tracking-tight;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply text-black bg-transparent; 
+  }
+  .logo-ticker-image {
+    @apply h-8 w-auto;
+  }
+  .tag {
+    @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+  }
+  .custum-file-upload {
+    @apply h-52 w-72 flex flex-col gap-5 cursor-pointer items-center justify-center border-2 border-dashed border-gray-300 bg-gray-900 p-6 rounded-lg shadow-lg;
+  }
+  
+  .custum-file-upload .icon {
+    @apply flex items-center justify-center;
+  }
+  
+  .custum-file-upload .icon svg {
+    @apply h-20 fill-gray-300;
+  }
+  
+  .custum-file-upload .text {
+    @apply flex items-center justify-center;
+  }
+  
+  .custum-file-upload .text span {
+    @apply font-normal text-gray-300;
+  }
+  
+  .custum-file-upload input {
+    @apply hidden;
+  }
+  .section-title {
+    @apply text-center text-3xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text
+  }
+  .section-description {
+    @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E]
+  }
+  .section-heading {
+    @apply max-w-[540px] mx-auto
+  }
+  .card {
+    @apply p-10 border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+  }
+}
